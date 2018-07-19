@@ -12,12 +12,7 @@ Branches for this project life cycle.
 
 **dev** : Development
 
-```mermaid
-sequenceDiagram
-
-dev-->test:   Check development
-test->master: Approve test
-```
+![diagram](https://chart.googleapis.com/chart?cht=gv&chl=graph{dev--test;test--master})
 
 ## Installation
 
