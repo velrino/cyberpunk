@@ -1,0 +1,23 @@
+{
+  "name": "cart",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "test",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/velrino/cart.git"
+  },
+  "author": "velrino",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/velrino/cart/issues"
+  },
+  "homepage": "https://github.com/velrino/cart#readme",
+  "dependencies": {
+    "express": "^4.16.3"
+  }
+}
