@@ -2,6 +2,10 @@
 
 Cart is my personal project for learn more about the wonderful language programming with **Nodejs** and **Domain-driven design**.
 
+## Trello
+  
+Tasks throughout the project are at this [link](https://trello.com/b/6mKTWXH5)
+
 ## Branchs
 
 Branches for this project life cycle.
