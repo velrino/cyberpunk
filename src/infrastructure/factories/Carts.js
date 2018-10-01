@@ -1,9 +1,5 @@
-class Carts {
-    constructor(id,name) {
-        this.id = id;
-    }
+export default class Carts {
+  constructor(id) {
+    this.id = id;
+  }
 }
-
-module.exports = {
-    Carts: Carts
-};

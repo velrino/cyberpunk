@@ -1,13 +1,13 @@
-const getManager = require("typeorm").getManager;
+import typeorm from 'typeorm';
 
-module.exports = {
-  create: function (Model, object) {
-    return getManager().getRepository(Model).save(object);
+export default {
+  create(Model, object) {
+    return typeorm.getManager().getRepository(Model).save(object);
   },
-  list: function (Model) {
-    return getManager().getRepository(Model).find();
+  list(Model) {
+    return typeorm.getManager().getRepository(Model).find();
   },
-  first: function (Model,id) {
-    return getManager().getRepository(Model).findOne(id);
+  first(Model, id) {
+    return typeorm.getManager().getRepository(Model).findOne(id);
   },
 };

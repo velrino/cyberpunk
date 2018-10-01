@@ -12,7 +12,7 @@ typeorm.createConnection({
   database: "cart",
   synchronize: true,
   logging: false,
-  entities: Helpers.entities()
+  //entities: Helpers.entities()
 }).then(async connection => {
 
   var bodyParser = require('body-parser')

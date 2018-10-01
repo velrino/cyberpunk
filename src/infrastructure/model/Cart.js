@@ -1,10 +1,6 @@
-class Cart {
-    constructor(id, name) {
-        this.id = id;
-        this.name = name;
-    }
+export default class Carts {
+  constructor(id, name) {
+    this.id = id;
+    this.name = name;
+  }
 }
-
-module.exports = {
-    Cart: Cart
-};

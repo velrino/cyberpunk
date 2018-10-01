@@ -1,35 +1,33 @@
-const Cart = require("../model/Cart").Cart;
-const DB = require("../db");
+import DB from '../db';
+import Cart from '../model/Cart';
 
-module.exports = {
-  create: function (request,response) {
-    return DB.create(Cart,request.body)
-    .then((created) => {
-      response.send( created );
-      }).catch(function (error) {
-        return error;
+export default {
+  create(request, response) {
+    return DB.create(Cart, request.body)
+      .then((created) => {
+        response.send(created);
+      }).catch(error => error);
+  },
+  list(request, response) {
+    return DB.list(Cart).then((created) => {
+      response.send(created);
     });
   },
-  list: function (request,response) {
-    return DB.list(Cart).then((created) => { 
-        response.send( created );
-     })
+  show(request, response) {
+    return DB.first(Cart, request.params.id).then((result) => {
+      response.send(result);
+    });
   },
-  show: function (request,response) {
-    return DB.first(Cart,request.params.id).then((result) => { 
-        response.send(result);
-     })
+  delete() {
+    return {};
   },
-  delete: function (request,response) {
-    return {}
-  }, 
-  addProduct: function (request,response) {
-    return {}
-  }, 
-  updateProduct: function (request,response) {
-    return {}
-  }, 
-  removeProduct: function (request,response) {
-    return {}
-  },  
+  addProduct() {
+    return {};
+  },
+  updateProduct() {
+    return {};
+  },
+  removeProduct() {
+    return {};
+  },
 };
