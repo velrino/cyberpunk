@@ -1,13 +1,14 @@
-import GetCartCommand from '../../../../src/domain/commands/cart';
+import GetCartCommand from '../../../../src/domain/commands/cart/get';
 import CartRepository from '../../../../src/infrastructure/repositories/cart';
+import mockCart from '../../../fixtures/cart';
 
-const getCartCommand = new GetCartCommand(new CartRepository());
+const getCartCommand = new GetCartCommand({ cartRepository: new CartRepository() });
 
 describe('GetCartCommand', () => {
   describe('Execute()', () => {
-    test('Return Cart object', async (done) => {
-      const result = await getCartCommand.execute();
-      expect(result).toBe(Object);
+    test('Return Cart object', (done) => {
+      const result = getCartCommand.execute();
+      expect(result).toMatchObject(mockCart);
       done();
     });
   });
