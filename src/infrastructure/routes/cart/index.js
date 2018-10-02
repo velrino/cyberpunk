@@ -7,6 +7,6 @@ module.exports = [
   {
     path: '/cart',
     method: 'get',
-    action: newGetCartFactory.action,
+    action: newGetCartFactory.create,
   },
 ];

@@ -1,5 +1,5 @@
 export default class GetCartCommand {
-  constructor({ cartRepository }) {    
+  constructor({ cartRepository }) {
     this.cartRepository = cartRepository;
   }
 
