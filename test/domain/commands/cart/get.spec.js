@@ -8,7 +8,8 @@ describe('GetCartCommand', () => {
   describe('Execute()', () => {
     test('Return Cart object', (done) => {
       const result = getCartCommand.execute();
-      expect(result).toMatchObject(mockCart);
+      expect(result.body).toMatchObject(mockCart);
+      expect(result.status).toBe(null);
       done();
     });
   });
