@@ -1,5 +1,10 @@
 export default class GetCartCommand {
-  execute(request, response) {
-    return response.send({ hello: 'word' });
+  constructor({ cartRepository }) {    
+    this.cartRepository = cartRepository;
+  }
+
+  execute() {
+    const cart = this.cartRepository.getCart();
+    return cart;
   }
 }
