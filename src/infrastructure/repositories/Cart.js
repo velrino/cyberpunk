@@ -8,7 +8,7 @@ export default {
         response.send(created);
       }).catch(error => error);
   },
-  list(request, response) {
+  list(response) {
     return DB.list(Cart).then((created) => {
       response.send(created);
     });
