@@ -1,5 +1,5 @@
 import statusCode from 'http-status-codes';
-import commandMessages from '../../../../src/helpers/enums/command-messages';
+import ENUMS from '../../../../src/helpers/enums';
 import GetCartCommand from '../../../../src/domain/commands/cart/get';
 import cartRepository from '../../../infrastructure/repositories/cart';
 import cartRepositoryNotFound from '../../../infrastructure/repositories/cart-not-found';
@@ -18,7 +18,7 @@ describe('GetCartCommand', () => {
     });
     test('Return message when cart not found with status 404', (done) => {
       const result = getCartCommandNotFound.execute();
-      expect(result.body).toMatchObject(commandMessages.cart.notFound);
+      expect(result.body).toMatchObject(ENUMS.message.cart.notFound);
       expect(result.status).toBe(statusCode.NOT_FOUND);
       done();
     });

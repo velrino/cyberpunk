@@ -5,4 +5,12 @@ export default {
     NEW: 1,
     PAID: 2,
   },
+  message: Object.freeze({
+    cart: {
+      notFound: {
+        message: 'cart.notFound',
+        code: '0001',
+      },
+    },
+  }),
 };
