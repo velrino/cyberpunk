@@ -4,6 +4,6 @@ export default class Factory {
   constructor({ response, command }) {
     this.body = command.body || null;
     this.status = command.status || statusCodes.OK;
-    response.status(this.status).json(this.body);
+    response.status(this.status).send(this.body);
   }
 }

@@ -1,12 +1,10 @@
 /* Factories */
 import GetCartFactory from '../../factories/cart/get';
 
-const newGetCartFactory = new GetCartFactory();
-
 module.exports = [
   {
-    path: '/cart',
+    path: '/cart/:cartUid',
     method: 'get',
-    action: newGetCartFactory.create,
+    factory: new GetCartFactory(),
   },
 ];

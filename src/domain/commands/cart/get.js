@@ -9,8 +9,8 @@ export default class GetCartCommand extends HandlerCommand {
     this.cartRepository = cartRepository;
   }
 
-  execute() {
-    const cart = this.cartRepository.getCart();
+  execute({ params }) {
+    const cart = this.cartRepository.getCart(params.cartUid);
 
     if (_.isEmpty(cart)) {
       return this.emit(ENUMS.message.cart.notFound, statusCodes.NOT_FOUND);
