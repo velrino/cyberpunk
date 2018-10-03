@@ -11,7 +11,7 @@ routes.forEach((route) => {
   });
 });
 
-app.listen(3000, () => {
+app.listen(80, () => {
   /* eslint-disable-next-line no-console */
-  console.log('Port 3000!');
+  console.log('Run API in port 80!');
 });
