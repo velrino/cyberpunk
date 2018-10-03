@@ -1,3 +1,4 @@
+import _ from 'lodash';
 import Joi from 'joi';
 import uuid from 'uuid/v4';
 import ENUMS from '../../helpers/enums';
@@ -11,9 +12,11 @@ export default class Cart {
   constructor({
     cartUid,
     status,
+    totalCart,
   }) {
     this.cartUid = cartUid || uuid();
     this.status = status || ENUMS.cartStatus.NEW;
+    this.totalCart = totalCart || 0;
   }
 
   isValid() {
@@ -31,5 +34,10 @@ export default class Cart {
       ENUMS.cartStatus.CANCELED,
       ENUMS.cartStatus.DELETED,
     ].includes(this.status);
+  }
+
+  static calculateTotalCart(cart) {
+    const totalCart = _.sumBy(cart.products, product => (product.price * product.quantity));
+    return Object.assign(cart, { totalCart });
   }
 }

@@ -35,4 +35,13 @@ describe('GetCartCommand', () => {
       done();
     });
   });
+  describe('calculateTotalCart()', () => {
+    test('Calculate total of cart', (done) => {
+      const cart = mockCart;
+      const cartEntity = new CartEntity(cart);
+      const result = CartEntity.calculateTotalCart(mockCart);
+      expect(result.totalCart).not.toEqual(cartEntity.totalCart);
+      done();
+    });
+  });
 });

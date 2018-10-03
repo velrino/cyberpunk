@@ -4,10 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "test",
     "start": "nodemon src/infrastructure/routes/index.js --exec babel-node",
     "lint": "eslint src/ test/",
-    "lint:fix": "eslint --fix src/ test/"
+    "lint:fix": "eslint --fix src/ test/",
+    "test": "jest test/unit --verbose --forceExit --collectCoverage"
   },
   "repository": {
     "type": "git",
