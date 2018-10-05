@@ -8,7 +8,7 @@
     "npm": "6.4.1"
   },
   "scripts": {
-    "start": "nodemon src/infrastructure/routes/index.js --exec babel-node",
+    "start": "nodemon index.js --exec babel-node",
     "lint": "eslint src/ test/",
     "lint:fix": "eslint --fix src/ test/",
     "test": "jest test/unit --verbose --forceExit --collectCoverage"
