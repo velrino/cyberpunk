@@ -2,6 +2,8 @@ import express from 'express';
 import bodyParser from 'body-parser';
 import routes from './cart/index';
 
+const PORT = process.env.PORT || 3000;
+
 const app = express();
 app.use(bodyParser.json());
 
@@ -11,7 +13,8 @@ routes.forEach((route) => {
   });
 });
 
-app.listen(80, () => {
+app.listen(PORT, () => {
+  const runningMessage = 'Run API in port ';
   /* eslint-disable-next-line no-console */
-  console.log('Run API in port 80!');
+  console.log(runningMessage.concat(PORT));
 });
